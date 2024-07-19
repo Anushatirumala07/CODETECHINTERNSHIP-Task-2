@@ -5,62 +5,41 @@ ID: CT12DS312
 Domain: Java Programming
 Duration: May to July 2024
 Mentor: G.Sravani
-Overview of the Online Banking System Java Program
+Overview of StudentGradeTracker Java Program
 Purpose:
-The purpose of this Java program is to simulate an online banking system where users can log in, manage their accounts, perform banking operations (such as deposit, withdraw, transfer), and view account details.
+The StudentGradeTracker program serves the purpose of allowing users (typically educators, students, or administrators) to input grades for various subjects or assignments, calculate the average grade, determine the letter grade based on predefined criteria, and optionally compute a GPA based on the letter grade.
 
 Components and Functionality:
-User Interface:
+Initialization and User Input:
 
-Uses Scanner for user input to simulate a command-line interface (CLI) for interacting with the banking system.
-Provides options for users to log in, exit the system, and performs banking operations once logged in.
-User Management:
+The program starts by initializing a Scanner object to read user input.
+Users are prompted to enter the number of subjects or assignments for which grades will be tracked.
+Grade Input Loop:
 
-Allows users to log in using their username and password.
-Once logged in, provides access to user-specific banking functionalities.
-Account Management:
+Using a loop, the program iterates through each subject or assignment, prompting the user to enter:
+The name of the subject or assignment.
+The grade received for that subject or assignment.
+Each subject name and grade are stored in separate lists (subjectNames and subjectGrades).
+Average Grade Calculation:
 
-Supports management of multiple accounts per user.
-Users can perform operations like depositing funds, withdrawing funds, transferring funds between accounts, and checking account balances.
-Data Persistence:
+After gathering all grades, the program calculates the total grade by summing up all grades stored in subjectGrades.
+It then computes the average grade by dividing the total grade by the number of subjects or assignments (numSubjects).
+Letter Grade Determination:
 
-Simulated in-memory storage of user accounts and transactions using Java classes.
-Error Handling:
+Based on the calculated average grade, the program determines the letter grade using a method (calculateLetterGrade(averageGrade)).
+The calculateLetterGrade method uses conditional statements (if-else) to assign a letter grade ('A', 'B', 'C', 'D', 'F') based on the average grade.
+GPA Calculation (Optional):
 
-Includes basic error handling for invalid inputs and ensures operations are performed safely (e.g., checking for sufficient funds before performing a withdrawal).
-User Experience:
+For demonstration purposes, the program calculates a GPA corresponding to the letter grade using another method (calculateGPA(letterGrade)).
+The calculateGPA method utilizes a switch statement to assign a GPA value (4.0, 3.0, 2.0, 1.0, 0.0) based on the letter grade.
+Output:
 
-Provides clear prompts and messages to guide the user through interactions with the banking system.
-Ensures security by validating user credentials and handling sensitive operations like withdrawals and transfers carefully.
-Detailed Breakdown:
-Initialization:
+After computing the average grade, determining the letter grade, and optionally calculating the GPA, the program displays a summary:
+The average grade is shown with two decimal places.
+The determined letter grade is displayed.
+If calculated, the GPA is shown with two decimal places.
+Closure:
 
-Sets up a Scanner object to read user input from the console.
-Initializes a placeholder for the current user (currentUser) to manage sessions.
-User Login:
+Finally, the program closes the Scanner object to release resources.
 
-Prompts users to enter their username and password.
-Authenticates users against predefined credentials (for simplicity, this can be hardcoded or simulated).
-Main Menu:
 
-Displays options for logging in or exiting the system.
-Uses a switch statement to handle user choices:
-Allows users to log in (case 1) or exit (case 2).
-Banking Operations:
-
-Once logged in, presents a menu of banking operations:
-Deposit funds into an account.
-Withdraw funds from an account.
-Transfer funds between accounts.
-View account balance.
-Account and Transaction Handling:
-
-Manages user accounts and their associated transactions.
-Uses classes like User, Account, and Transaction to encapsulate data and operations related to banking activities.
-Error Handling and Validation:
-
-Validates user inputs to prevent errors (e.g., ensuring numeric input for amounts).
-Checks for sufficient funds before allowing withdrawals or transfers.
-User Interface Flow:
-
-Guides users through each step with clear prompts and responses, ensuring a user-friendly experience.
