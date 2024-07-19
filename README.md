@@ -41,5 +41,8 @@ If calculated, the GPA is shown with two decimal places.
 Closure:
 
 Finally, the program closes the Scanner object to release resources.
+OUTPUT:
+![Screenshot 2024-07-19 220423](https://github.com/user-attachments/assets/0019229b-425c-428c-bc7e-04647589d913)
+
 
 
